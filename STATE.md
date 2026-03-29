@@ -1,6 +1,6 @@
 # Cyguin Changelog — Build State
 
-## Current Slice: 4 — COMPLETE
+## Current Slice: 5 — COMPLETE (PR open)
 
 ## Packages Built
 - @cyguin/changelog-core@0.0.1 — types, ChangelogAdapter interface, cuid2 util
@@ -19,9 +19,27 @@
 ## Build Status
 All five packages build clean. `packages/react` uses ESM-only output with DTS generation. Externals correct.
 
+## Examples Added
+- examples/with-sqlite/ — Next.js 14 App Router + SQLite adapter + Drizzle ORM
+- examples/with-postgres/ — Next.js 14 App Router + Postgres adapter + Drizzle ORM
+
+## Publish Prep
+- All 5 package.json polished (description, keywords, repository, homepage, license, author, removed "private": true)
+- CLI bin path fixed (./dist/bin.js, not ./dist/bin/index.js)
+- Root README.md and LICENSE (MIT) added
+- `pnpm publish --dry-run --no-git-checks` passes for all 5 packages
+
 ## Remaining Slices
-- [x] Slice 4 — CLI scaffolder (npx @cyguin/changelog init) ✅ COMPLETE
-- [ ] Slice 5 — Examples + publish prep
+- [x] Slice 4 — CLI scaffolder ✅ COMPLETE
+- [x] Slice 5 — Examples + publish prep ✅ COMPLETE
+- [ ] Slice 6 — Publish to npm
+
+## Notes
+- STATE.md and DECISIONS.md were not written by agent — created manually post-slice.
+- `packages/react` requires `@types/react` and `@types/react-dom` as devDeps for DTS generation to work.
+- LSP errors in workspace are pre-existing and unrelated to current slice.
+- Remote has no `main` branch — default branch is `feature/slice-1-core-adapters`. PR targets that branch.
+- PR: https://github.com/joeproit/changelog-monorepo/pull/1
 
 ## Notes
 - STATE.md and DECISIONS.md were not written by agent — created manually post-slice.
