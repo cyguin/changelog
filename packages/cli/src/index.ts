@@ -1,7 +1,2 @@
-export {
-  type RouteTemplateConfig,
-  listAndCreateRoute,
-  singleEntryRoute,
-  readRoute,
-  adapterInitModule,
-} from './templates/routes.js'
+import { init } from './init.js'
+init()
