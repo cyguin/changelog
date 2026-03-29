@@ -2,15 +2,16 @@
   "name": "@cyguin/changelog-cli",
   "version": "0.0.1",
   "private": true,
-  "type": "module",
   "description": "CLI scaffolder for @cyguin/changelog",
   "license": "MIT",
-  "main": "./dist/index.js",
-  "module": "./dist/index.js",
+  "main": "./dist/index.cjs",
   "types": "./dist/index.d.ts",
+  "bin": {
+    "changelog-init": "./dist/bin/index.js"
+  },
   "exports": {
     "./templates": {
-      "import": "./dist/templates/routes.js",
+      "require": "./dist/templates/routes.cjs",
       "types": "./dist/templates/routes.d.ts"
     }
   },
@@ -20,7 +21,11 @@
     "test": "vitest run",
     "typecheck": "tsc --noEmit"
   },
+  "dependencies": {
+    "@clack/prompts": "^0.7.0"
+  },
   "devDependencies": {
+    "@types/node": "^20.0.0",
     "tsup": "^8.3.0",
     "typescript": "^5.4.0"
   }
