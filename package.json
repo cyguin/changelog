@@ -1,0 +1,32 @@
+{
+  "name": "@cyguin/changelog",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Drop-in changelog package for Next.js apps",
+  "license": "MIT",
+  "author": {
+    "name": "Joe and Mark",
+    "url": "https://cyguin.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cyguin/changelog"
+  },
+  "scripts": {
+    "build": "pnpm -r run build",
+    "test": "pnpm -r run test",
+    "lint": "pnpm -r run lint",
+    "typecheck": "pnpm -r run typecheck",
+    "clean": "pnpm -r run clean"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "pnpm": "^10.33.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.3.3",
+    "vitest": "^1.2.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

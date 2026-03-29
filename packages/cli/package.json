@@ -1,0 +1,27 @@
+{
+  "name": "@cyguin/changelog-cli",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "description": "CLI scaffolder for @cyguin/changelog",
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    "./templates": {
+      "import": "./dist/templates/routes.js",
+      "types": "./dist/templates/routes.d.ts"
+    }
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "tsup": "^8.3.0",
+    "typescript": "^5.4.0"
+  }
+}

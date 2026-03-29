@@ -1,0 +1,36 @@
+{
+  "name": "@cyguin/changelog-adapter-sqlite",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "description": "SQLite adapter for @cyguin/changelog",
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": ["dist"],
+  "dependencies": {
+    "@cyguin/changelog-core": "workspace:*"
+  },
+  "peerDependencies": {
+    "better-sqlite3": "^9.4.0"
+  },
+  "optionalDependencies": {
+    "better-sqlite3": "^9.4.0"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.8",
+    "better-sqlite3": "^9.4.0"
+  },
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  }
+}
