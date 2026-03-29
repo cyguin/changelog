@@ -1,12 +1,12 @@
 # Cyguin Changelog — Build State
 
-## Current Slice: 3 — COMPLETE
+## Current Slice: 4 — COMPLETE
 
 ## Packages Built
 - @cyguin/changelog-core@0.0.1 — types, ChangelogAdapter interface, cuid2 util
 - @cyguin/changelog-adapter-sqlite@0.0.1 — SQLiteAdapter (better-sqlite3)
 - @cyguin/changelog-adapter-postgres@0.0.1 — PostgresAdapter (postgres npm pkg)
-- @cyguin/changelog-cli@0.0.1 — route template strings (tsup dual output: ESM + CJS)
+- @cyguin/changelog-cli@0.0.1 — route template strings + interactive CLI scaffolder (tsup dual output: ESM + CJS, shebang banner)
 - @cyguin/changelog-react@0.0.1 — React components + hooks (tsup ESM only + DTS)
 
 ## Package Locations
@@ -20,7 +20,7 @@
 All five packages build clean. `packages/react` uses ESM-only output with DTS generation. Externals correct.
 
 ## Remaining Slices
-- [ ] Slice 4 — CLI scaffolder (npx @cyguin/changelog init)
+- [x] Slice 4 — CLI scaffolder (npx @cyguin/changelog init) ✅ COMPLETE
 - [ ] Slice 5 — Examples + publish prep
 
 ## Notes
