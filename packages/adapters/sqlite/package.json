@@ -1,6 +1,6 @@
 {
   "name": "@cyguin/changelog-adapter-sqlite",
-  "version": "0.0.1",
+  "version": "0.1.6",
   "type": "module",
   "description": "SQLite adapter for @cyguin/changelog",
   "keywords": ["changelog", "sqlite", "adapter", "nextjs"],

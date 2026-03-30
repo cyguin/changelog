@@ -1,6 +1,6 @@
 {
   "name": "@cyguin/changelog-core",
-  "version": "0.0.1",
+  "version": "0.1.6",
   "type": "module",
   "description": "TypeScript types and ChangelogAdapter interface for @cyguin/changelog",
   "keywords": ["changelog", "changelog-feed", "nextjs", "typescript"],

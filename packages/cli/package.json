@@ -1,6 +1,6 @@
 {
   "name": "@cyguin/changelog-cli",
-  "version": "0.0.1",
+  "version": "0.1.6",
   "description": "CLI scaffolder for @cyguin/changelog",
   "keywords": ["changelog", "cli", "scaffolder", "nextjs"],
   "license": "MIT",
