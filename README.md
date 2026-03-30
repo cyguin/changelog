@@ -1,6 +1,5 @@
 # @cyguin/changelog
 
-> one sentence. what it does, not what it is. no marketing.
 
 drop-in changelog feed for Next.js. self-hosted. no vendor lock. ships as npm packages.
 
