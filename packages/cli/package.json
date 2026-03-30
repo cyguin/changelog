@@ -1,6 +1,6 @@
 {
   "name": "@cyguin/changelog-cli",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "CLI scaffolder for @cyguin/changelog",
   "keywords": ["changelog", "cli", "scaffolder", "nextjs"],
   "license": "MIT",
@@ -10,6 +10,9 @@
     "url": "https://github.com/cyguin/changelog"
   },
   "homepage": "https://github.com/cyguin/changelog#readme",
+  "bugs": {
+    "url": "https://github.com/cyguin/changelog/issues"
+  },
   "main": "./dist/index.cjs",
   "types": "./dist/index.d.ts",
   "bin": {
@@ -21,7 +24,7 @@
       "types": "./dist/templates/routes.d.ts"
     }
   },
-  "files": ["dist"],
+  "files": ["dist", "README.md"],
   "scripts": {
     "build": "tsup",
     "test": "vitest run",

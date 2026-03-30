@@ -1,6 +1,6 @@
 {
   "name": "@cyguin/changelog-react",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "type": "module",
   "description": "React components for @cyguin/changelog",
   "keywords": ["changelog", "react", "components", "nextjs"],
@@ -11,6 +11,9 @@
     "url": "https://github.com/cyguin/changelog"
   },
   "homepage": "https://github.com/cyguin/changelog#readme",
+  "bugs": {
+    "url": "https://github.com/cyguin/changelog/issues"
+  },
   "main": "./dist/index.js",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -21,7 +24,8 @@
     }
   },
   "files": [
-    "dist"
+    "dist",
+    "README.md"
   ],
   "scripts": {
     "build": "tsup",

@@ -40,7 +40,7 @@ All five packages build clean. `packages/react` uses ESM-only output with DTS ge
 - LSP errors in workspace are pre-existing and unrelated to current slice.
 - Remote has no `main` branch — integration branch is `feature/slice-4-cli-scaffolder`.
 - PR #1 (slices 1–5) merged into `feature/slice-4-cli-scaffolder` at commit `7d1412b`.
-- PR: https://github.com/joeproit/changelog-monorepo/pull/1 (MERGED)
+- PR: https://github.com/cyguin/changelog/pull/1 (MERGED)
 
 ## Notes
 - STATE.md and DECISIONS.md were not written by agent — created manually post-slice.
