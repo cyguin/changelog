@@ -1,6 +1,6 @@
 # Cyguin Changelog — Build State
 
-## Current Slice: 5 — COMPLETE (PR open)
+## Current Slice: 5 — COMPLETE (PR merged)
 
 ## Packages Built
 - @cyguin/changelog-core@0.0.1 — types, ChangelogAdapter interface, cuid2 util
@@ -38,8 +38,9 @@ All five packages build clean. `packages/react` uses ESM-only output with DTS ge
 - STATE.md and DECISIONS.md were not written by agent — created manually post-slice.
 - `packages/react` requires `@types/react` and `@types/react-dom` as devDeps for DTS generation to work.
 - LSP errors in workspace are pre-existing and unrelated to current slice.
-- Remote has no `main` branch — default branch is `feature/slice-1-core-adapters`. PR targets that branch.
-- PR: https://github.com/joeproit/changelog-monorepo/pull/1
+- Remote has no `main` branch — integration branch is `feature/slice-4-cli-scaffolder`.
+- PR #1 (slices 1–5) merged into `feature/slice-4-cli-scaffolder` at commit `7d1412b`.
+- PR: https://github.com/joeproit/changelog-monorepo/pull/1 (MERGED)
 
 ## Notes
 - STATE.md and DECISIONS.md were not written by agent — created manually post-slice.
