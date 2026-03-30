@@ -166,20 +166,7 @@ export default function RootLayout({ children }) {
 
 no Cyguin cloud required. these packages are the whole product — the API routes, the schema, the read/write logic. you can run it forever without touching our servers.
 
-if you want the hosted dashboard at [changelog.cyguin.com](https://changelog.cyguin.com), that's a separate thing with a separate price. the packages are MIT regardless.
-
----
-
-## hosted tier
-
-| | self-hosted | hosted |
-|---|---|---|
-| npm packages | ✓ | ✓ |
-| data ownership | your infra | Cyguin cloud |
-| dashboard UI | bring your own | included |
-| price | free | $[X]/mo |
-
-[changelog.cyguin.com →](https://changelog.cyguin.com)
+A hosted tier is planned. If you're interested, watch this repo for updates.
 
 ---
 

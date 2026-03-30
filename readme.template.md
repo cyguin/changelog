@@ -96,20 +96,7 @@ adding your own: [adapter interface docs](./docs/adapters.md)
 
 no Cyguin cloud required. this package is the whole product — the API routes, the schema, the read/write logic. you can run it forever without touching our servers.
 
-if you want the hosted dashboard at [changelog.cyguin.com](https://changelog.cyguin.com), that's a separate thing with a separate price. the package is MIT regardless.
-
----
-
-## hosted tier
-
-| | self-hosted | hosted |
-|---|---|---|
-| npm package | ✓ | ✓ |
-| data ownership | your infra | cyguin cloud |
-| dashboard UI | bring your own | included |
-| price | free | $[X]/mo |
-
-[changelog.cyguin.com →](https://changelog.cyguin.com)
+A hosted tier is planned. If you're interested, watch this repo for updates.
 
 ---
 
