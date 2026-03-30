@@ -1,6 +1,6 @@
 # Cyguin Changelog — Build State
 
-## Current Slice: 5 — COMPLETE (PR merged)
+## Current Slice: 6 — COMPLETE (published to npm)
 
 ## Packages Built
 - @cyguin/changelog-core@0.0.1 — types, ChangelogAdapter interface, cuid2 util
@@ -32,7 +32,7 @@ All five packages build clean. `packages/react` uses ESM-only output with DTS ge
 ## Remaining Slices
 - [x] Slice 4 — CLI scaffolder ✅ COMPLETE
 - [x] Slice 5 — Examples + publish prep ✅ COMPLETE
-- [ ] Slice 6 — Publish to npm
+- [x] Slice 6 — Publish to npm ✅ COMPLETE
 
 ## Notes
 - STATE.md and DECISIONS.md were not written by agent — created manually post-slice.
