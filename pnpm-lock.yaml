@@ -98,8 +98,8 @@ importers:
   packages/adapters/postgres:
     dependencies:
       '@cyguin/changelog-core':
-        specifier: ^0.1.6
-        version: 0.1.6
+        specifier: ^0.1.7
+        version: 0.1.7
     optionalDependencies:
       postgres:
         specifier: ^3.4.0
@@ -108,8 +108,8 @@ importers:
   packages/adapters/sqlite:
     dependencies:
       '@cyguin/changelog-core':
-        specifier: ^0.1.6
-        version: 0.1.6
+        specifier: ^0.1.7
+        version: 0.1.7
     devDependencies:
       '@types/better-sqlite3':
         specifier: ^7.6.8
@@ -172,8 +172,8 @@ packages:
     bundledDependencies:
       - is-unicode-supported
 
-  '@cyguin/changelog-core@0.1.6':
-    resolution: {integrity: sha512-8JcoP45l2+539g48o++JzXdgdrobde82k73CmVMCJwTRb9INpSk1pKYHe4sUeDt08zgweQbuhjwp5iXz5rXiPA==}
+  '@cyguin/changelog-core@0.1.7':
+    resolution: {integrity: sha512-Nr/kAvOtNPWr7u8Q/XEKug5+Eq8TYmhqQNEB3/SovIPDWwn5Uajgh6Y1+eYfSQsN5yPuyugynTnjueJJ9airvw==}
 
   '@esbuild/aix-ppc64@0.21.5':
     resolution: {integrity: sha512-1SDgH6ZSPTlggy1yI6+Dbkiz8xzpHJEVAlF/AM1tHPLsf5STom9rwtjE4hKAF20FfXXNTFqEYXyJNWh1GiZedQ==}
@@ -1649,7 +1649,7 @@ snapshots:
       picocolors: 1.1.1
       sisteransi: 1.0.5
 
-  '@cyguin/changelog-core@0.1.6': {}
+  '@cyguin/changelog-core@0.1.7': {}
 
   '@esbuild/aix-ppc64@0.21.5':
     optional: true
