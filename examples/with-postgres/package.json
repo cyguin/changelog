@@ -1,0 +1,22 @@
+{
+  "name": "@examples/with-postgres",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev"
+  },
+  "dependencies": {
+    "next": "^14.2.0",
+    "react": "^18.3.0",
+    "react-dom": "^18.3.0",
+    "postgres": "^3.4.4",
+    "@cyguin/changelog-adapter-postgres": "workspace:*",
+    "@cyguin/changelog-react": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "@types/react": "^18.3.0",
+    "@types/react-dom": "^18.3.0",
+    "typescript": "^5.5.0"
+  }
+}

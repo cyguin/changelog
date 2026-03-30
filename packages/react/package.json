@@ -1,10 +1,16 @@
 {
   "name": "@cyguin/changelog-react",
   "version": "0.0.1",
-  "private": true,
   "type": "module",
   "description": "React components for @cyguin/changelog",
+  "keywords": ["changelog", "react", "components", "nextjs"],
   "license": "MIT",
+  "author": "Cyguin <dev@cyguin.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cyguin/changelog"
+  },
+  "homepage": "https://github.com/cyguin/changelog#readme",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",

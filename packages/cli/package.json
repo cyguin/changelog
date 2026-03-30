@@ -1,13 +1,19 @@
 {
   "name": "@cyguin/changelog-cli",
   "version": "0.0.1",
-  "private": true,
   "description": "CLI scaffolder for @cyguin/changelog",
+  "keywords": ["changelog", "cli", "scaffolder", "nextjs"],
   "license": "MIT",
+  "author": "Cyguin <dev@cyguin.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cyguin/changelog"
+  },
+  "homepage": "https://github.com/cyguin/changelog#readme",
   "main": "./dist/index.cjs",
   "types": "./dist/index.d.ts",
   "bin": {
-    "changelog-init": "./dist/bin/index.js"
+    "changelog-init": "./dist/bin.js"
   },
   "exports": {
     "./templates": {

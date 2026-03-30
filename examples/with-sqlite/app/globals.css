@@ -1,0 +1,7 @@
+/* Global styles — kept minimal since Next.js provides defaults */
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  margin: 0;
+  color: #111;
+  background: #fafafa;
+}
