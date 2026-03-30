@@ -115,9 +115,26 @@ export function ChangelogFeed({
           key={entry.id}
           onClick={() => onEntryClick?.(entry)}
           style={{
-            padding: '16px 0',
-            borderBottom: '1px solid #e5e7eb',
+            padding: '20px',
+            border: '1px solid #e5e7eb',
+            borderRadius: '12px',
+            marginBottom: '12px',
+            background: '#fff',
             cursor: onEntryClick ? 'pointer' : 'default',
+            boxShadow: '0 1px 3px rgba(0,0,0,0.05)',
+            transition: 'box-shadow 0.15s ease, transform 0.15s ease',
+          }}
+          onMouseEnter={(e) => {
+            if (onEntryClick) {
+              e.currentTarget.style.boxShadow = '0 4px 12px rgba(0,0,0,0.1)'
+              e.currentTarget.style.transform = 'translateY(-1px)'
+            }
+          }}
+          onMouseLeave={(e) => {
+            if (onEntryClick) {
+              e.currentTarget.style.boxShadow = '0 1px 3px rgba(0,0,0,0.05)'
+              e.currentTarget.style.transform = 'translateY(0)'
+            }
           }}
         >
           {renderEntry ? (
@@ -128,23 +145,25 @@ export function ChangelogFeed({
                 style={{
                   display: 'flex',
                   alignItems: 'center',
-                  gap: '8px',
-                  marginBottom: '6px',
+                  gap: '10px',
+                  marginBottom: '10px',
                   flexWrap: 'wrap',
                 }}
               >
-                <span style={{ fontWeight: 600, fontSize: '15px' }}>
+                <span style={{ fontWeight: 700, fontSize: '16px', color: '#111827' }}>
                   {entry.title}
                 </span>
                 {entry.version && (
                   <span
                     style={{
                       background: '#f3f4f6',
-                      color: '#374151',
-                      fontSize: '12px',
-                      padding: '2px 8px',
+                      color: '#4b5563',
+                      fontSize: '11px',
+                      padding: '3px 10px',
                       borderRadius: '9999px',
                       fontFamily: 'monospace',
+                      fontWeight: 500,
+                      letterSpacing: '0.02em',
                     }}
                   >
                     v{entry.version}
@@ -155,10 +174,11 @@ export function ChangelogFeed({
                     key={tag}
                     style={{
                       background: '#eff6ff',
-                      color: '#1d4ed8',
-                      fontSize: '12px',
-                      padding: '2px 8px',
+                      color: '#2563eb',
+                      fontSize: '11px',
+                      padding: '3px 10px',
                       borderRadius: '9999px',
+                      fontWeight: 500,
                     }}
                   >
                     {tag}
@@ -168,13 +188,14 @@ export function ChangelogFeed({
               <div
                 style={{
                   fontSize: '13px',
-                  color: '#6b7280',
-                  marginBottom: '8px',
+                  color: '#9ca3af',
+                  marginBottom: '12px',
+                  letterSpacing: '0.01em',
                 }}
               >
                 {formatDate(entry.publishedAt)}
               </div>
-              <div style={{ fontSize: '14px', lineHeight: 1.6, color: '#374151' }}>
+              <div style={{ fontSize: '14px', lineHeight: 1.7, color: '#374151' }}>
                 <ReactMarkdown>{entry.body}</ReactMarkdown>
               </div>
             </>

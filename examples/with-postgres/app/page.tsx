@@ -2,8 +2,33 @@ import { ChangelogFeed } from '@cyguin/changelog-react'
 
 export default function Home() {
   return (
-    <div>
-      <h1 style={{ fontSize: '1.5rem', marginBottom: '1rem' }}>Product Updates</h1>
+    <div
+      style={{
+        maxWidth: '720px',
+        margin: '0 auto',
+        padding: '2rem 1.5rem',
+      }}
+    >
+      <h1
+        style={{
+          fontSize: '2rem',
+          fontWeight: 700,
+          color: '#111827',
+          marginBottom: '0.5rem',
+          letterSpacing: '-0.02em',
+        }}
+      >
+        Product Updates
+      </h1>
+      <p
+        style={{
+          fontSize: '1rem',
+          color: '#6b7280',
+          marginBottom: '2rem',
+        }}
+      >
+        The latest features, improvements, and fixes.
+      </p>
       <ChangelogFeed
         apiBase="/api/changelog"
         pageSize={20}

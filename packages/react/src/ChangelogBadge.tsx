@@ -22,7 +22,7 @@ export function ChangelogBadge({
   badgeMaxCount = 99,
   triggerClassName,
   panelClassName,
-  panelWidth = 380,
+  panelWidth = 480,
   onEntryClick,
   renderTrigger,
 }: ChangelogBadgeProps) {
@@ -122,7 +122,7 @@ export function ChangelogBadge({
               right: '16px',
               width: panelWidth,
               maxWidth: `calc(100vw - 32px)`,
-              maxHeight: '70vh',
+              maxHeight: '80vh',
               overflowY: 'auto',
               background: '#fff',
               border: '1px solid #e5e7eb',
@@ -133,14 +133,18 @@ export function ChangelogBadge({
           >
             <div
               style={{
-                padding: '16px',
+                padding: '16px 20px',
                 borderBottom: '1px solid #e5e7eb',
                 display: 'flex',
                 justifyContent: 'space-between',
                 alignItems: 'center',
+                background: '#fafafa',
+                borderRadius: '12px 12px 0 0',
               }}
             >
-              <span style={{ fontWeight: 700, fontSize: '15px' }}>Changelog</span>
+              <span style={{ fontWeight: 700, fontSize: '16px', color: '#111827' }}>
+                Changelog
+              </span>
               <button
                 type="button"
                 onClick={closePanel}
