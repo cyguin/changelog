@@ -1,6 +1,6 @@
 {
   "name": "@cyguin/changelog-adapter-sqlite",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "type": "module",
   "description": "SQLite adapter for @cyguin/changelog",
   "keywords": [

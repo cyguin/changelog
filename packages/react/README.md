@@ -23,13 +23,17 @@ export default function Home() {
 }
 ```
 
+`ChangelogFeed` defaults to the cyguin dark theme, including the feed surface,
+loading state, and empty state. Pass `theme="light"` to opt into the light theme.
+
 Props:
 
 | prop | default | description |
 |---|---|---|
 | `apiBase` | — | your API base URL (required) |
-| `pageSize` | `20` | entries per page |
-| `emptyMessage` | `"Nothing yet"` | empty state text |
+| `theme` | `"dark"` | visual theme |
+| `pageSize` | `10` | entries per page |
+| `emptyMessage` | `"No changelog entries yet."` | empty state text |
 
 ## ChangelogBadge
 
@@ -55,10 +59,11 @@ Props:
 | prop | default | description |
 |---|---|---|
 | `apiBase` | — | your API base URL (required) |
+| `theme` | `"dark"` | visual theme |
 | `userId` | localStorage | user identifier for read state |
-| `pollInterval` | `30_000` | ms between polls |
+| `pollInterval` | `60_000` | ms between polls |
 | `badgeMaxCount` | `99` | cap displayed badge number |
-| `panelWidth` | `380` | panel width in px |
+| `panelWidth` | `480` | panel width in px |
 | `triggerClassName` | — | CSS class for trigger button |
 | `panelClassName` | — | CSS class for panel |
 

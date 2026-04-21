@@ -64,6 +64,12 @@ export function ChangelogFeed({
   renderEntry,
 }: ChangelogFeedProps) {
   const colors = themes[theme]
+  const rootStyle: React.CSSProperties = {
+    background: colors.bg,
+    color: colors.fg,
+    borderRadius: '8px',
+    padding: '12px',
+  }
   const [entries, setEntries] = useState<Entry[]>([])
   const [offset, setOffset] = useState(0)
   const [isLoading, setIsLoading] = useState(false)
@@ -116,7 +122,7 @@ export function ChangelogFeed({
     return (
       <div
         className={className}
-        style={{ color: '#fca5a5', padding: '16px', fontSize: '14px' }}
+        style={{ ...rootStyle, color: '#fca5a5', fontSize: '14px' }}
       >
         {error}
       </div>
@@ -127,7 +133,7 @@ export function ChangelogFeed({
     return (
       <div
         className={className}
-        style={{ color: colors.muted, padding: '16px', fontSize: '14px' }}
+        style={{ ...rootStyle, color: colors.muted, fontSize: '14px' }}
       >
         {emptyMessage}
       </div>
@@ -135,7 +141,7 @@ export function ChangelogFeed({
   }
 
   return (
-    <div className={className}>
+    <div className={className} style={rootStyle}>
       {entries.map((entry) => (
         <div
           key={entry.id}

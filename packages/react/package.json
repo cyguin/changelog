@@ -1,6 +1,6 @@
 {
   "name": "@cyguin/changelog-react",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "type": "module",
   "description": "React components for @cyguin/changelog",
   "keywords": [
