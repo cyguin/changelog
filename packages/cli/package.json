@@ -1,8 +1,13 @@
 {
   "name": "@cyguin/changelog-cli",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "CLI scaffolder for @cyguin/changelog",
-  "keywords": ["changelog", "cli", "scaffolder", "nextjs"],
+  "keywords": [
+    "changelog",
+    "cli",
+    "scaffolder",
+    "nextjs"
+  ],
   "license": "MIT",
   "author": "Cyguin <dev@cyguin.com>",
   "repository": {
@@ -24,7 +29,10 @@
       "types": "./dist/templates/routes.d.ts"
     }
   },
-  "files": ["dist", "README.md"],
+  "files": [
+    "dist",
+    "README.md"
+  ],
   "scripts": {
     "build": "tsup",
     "test": "vitest run",

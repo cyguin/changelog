@@ -1,9 +1,14 @@
 {
   "name": "@cyguin/changelog-react",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "type": "module",
   "description": "React components for @cyguin/changelog",
-  "keywords": ["changelog", "react", "components", "nextjs"],
+  "keywords": [
+    "changelog",
+    "react",
+    "components",
+    "nextjs"
+  ],
   "license": "MIT",
   "author": "Cyguin <dev@cyguin.com>",
   "repository": {

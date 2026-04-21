@@ -15,12 +15,36 @@ export interface Entry {
 
 interface ChangelogFeedProps {
   apiBase: string
+  theme?: 'light' | 'dark'
   pageSize?: number
   emptyMessage?: string
   className?: string
   onEntryClick?: (entry: Entry) => void
   renderEntry?: (entry: Entry) => React.ReactNode
 }
+
+const themes = {
+  light: {
+    bg: '#ffffff',
+    bgSubtle: '#f1f3f6',
+    border: '#e5e5e5',
+    fg: '#0a0d17',
+    muted: '#858b98',
+    accent: '#ffd21f',
+    accentFg: '#0a0d17',
+    shadow: '0 1px 4px rgba(0,0,0,0.08)',
+  },
+  dark: {
+    bg: '#0a0d17',
+    bgSubtle: '#101521',
+    border: '#252b3a',
+    fg: '#f1f3f6',
+    muted: '#858b98',
+    accent: '#ffd21f',
+    accentFg: '#0a0d17',
+    shadow: '0 18px 50px rgba(0, 0, 0, 0.32)',
+  },
+} as const
 
 function formatDate(dateStr: string): string {
   return new Date(dateStr).toLocaleDateString('en-US', {
@@ -32,12 +56,14 @@ function formatDate(dateStr: string): string {
 
 export function ChangelogFeed({
   apiBase,
+  theme = 'dark',
   pageSize = 10,
   emptyMessage = 'No changelog entries yet.',
   className,
   onEntryClick,
   renderEntry,
 }: ChangelogFeedProps) {
+  const colors = themes[theme]
   const [entries, setEntries] = useState<Entry[]>([])
   const [offset, setOffset] = useState(0)
   const [isLoading, setIsLoading] = useState(false)
@@ -90,7 +116,7 @@ export function ChangelogFeed({
     return (
       <div
         className={className}
-        style={{ color: '#dc2626', padding: '16px', fontSize: '14px' }}
+        style={{ color: '#fca5a5', padding: '16px', fontSize: '14px' }}
       >
         {error}
       </div>
@@ -101,7 +127,7 @@ export function ChangelogFeed({
     return (
       <div
         className={className}
-        style={{ color: '#6b7280', padding: '16px', fontSize: '14px' }}
+        style={{ color: colors.muted, padding: '16px', fontSize: '14px' }}
       >
         {emptyMessage}
       </div>
@@ -116,23 +142,24 @@ export function ChangelogFeed({
           onClick={() => onEntryClick?.(entry)}
           style={{
             padding: '20px',
-            border: '1px solid #e5e7eb',
-            borderRadius: '12px',
+            border: `1px solid ${colors.border}`,
+            borderRadius: '8px',
             marginBottom: '12px',
-            background: '#fff',
+            background: colors.bg,
+            color: colors.fg,
             cursor: onEntryClick ? 'pointer' : 'default',
-            boxShadow: '0 1px 3px rgba(0,0,0,0.05)',
+            boxShadow: colors.shadow,
             transition: 'box-shadow 0.15s ease, transform 0.15s ease',
           }}
           onMouseEnter={(e) => {
             if (onEntryClick) {
-              e.currentTarget.style.boxShadow = '0 4px 12px rgba(0,0,0,0.1)'
+              e.currentTarget.style.boxShadow = '0 22px 60px rgba(0,0,0,0.38)'
               e.currentTarget.style.transform = 'translateY(-1px)'
             }
           }}
           onMouseLeave={(e) => {
             if (onEntryClick) {
-              e.currentTarget.style.boxShadow = '0 1px 3px rgba(0,0,0,0.05)'
+              e.currentTarget.style.boxShadow = colors.shadow
               e.currentTarget.style.transform = 'translateY(0)'
             }
           }}
@@ -150,14 +177,14 @@ export function ChangelogFeed({
                   flexWrap: 'wrap',
                 }}
               >
-                <span style={{ fontWeight: 700, fontSize: '16px', color: '#111827' }}>
+                <span style={{ fontWeight: 700, fontSize: '16px', color: colors.fg }}>
                   {entry.title}
                 </span>
                 {entry.version && (
                   <span
                     style={{
-                      background: '#f3f4f6',
-                      color: '#4b5563',
+                      background: colors.bgSubtle,
+                      color: colors.muted,
                       fontSize: '11px',
                       padding: '3px 10px',
                       borderRadius: '9999px',
@@ -173,8 +200,8 @@ export function ChangelogFeed({
                   <span
                     key={tag}
                     style={{
-                      background: '#eff6ff',
-                      color: '#2563eb',
+                      background: 'color-mix(in srgb, #ffd21f 14%, transparent)',
+                      color: colors.accent,
                       fontSize: '11px',
                       padding: '3px 10px',
                       borderRadius: '9999px',
@@ -188,14 +215,14 @@ export function ChangelogFeed({
               <div
                 style={{
                   fontSize: '13px',
-                  color: '#9ca3af',
+                  color: colors.muted,
                   marginBottom: '12px',
                   letterSpacing: '0.01em',
                 }}
               >
                 {formatDate(entry.publishedAt)}
               </div>
-              <div style={{ fontSize: '14px', lineHeight: 1.7, color: '#374151' }}>
+              <div style={{ fontSize: '14px', lineHeight: 1.7, color: colors.fg }}>
                 <ReactMarkdown>{entry.body}</ReactMarkdown>
               </div>
             </>
@@ -204,12 +231,12 @@ export function ChangelogFeed({
       ))}
       <div ref={sentinelRef} style={{ height: '1px' }} />
       {isLoading && (
-        <div style={{ textAlign: 'center', padding: '16px', color: '#9ca3af', fontSize: '14px' }}>
+        <div style={{ textAlign: 'center', padding: '16px', color: colors.muted, fontSize: '14px' }}>
           Loading...
         </div>
       )}
       {!hasMore && entries.length > 0 && (
-        <div style={{ textAlign: 'center', padding: '16px', color: '#9ca3af', fontSize: '13px' }}>
+        <div style={{ textAlign: 'center', padding: '16px', color: colors.muted, fontSize: '13px' }}>
           You're all caught up!
         </div>
       )}

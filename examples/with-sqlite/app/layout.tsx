@@ -10,7 +10,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body>
-        <nav style={{ padding: '1rem', borderBottom: '1px solid #e5e5e5', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+        <nav style={{ padding: '1rem', borderBottom: '1px solid #252b3a', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <strong>Changelog Demo (SQLite)</strong>
           <ChangelogBadge apiBase="/api/changelog" userId="demo-user" />
         </nav>

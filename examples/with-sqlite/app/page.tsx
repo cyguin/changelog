@@ -13,7 +13,7 @@ export default function Home() {
         style={{
           fontSize: '2rem',
           fontWeight: 700,
-          color: '#111827',
+          color: '#f1f3f6',
           marginBottom: '0.5rem',
           letterSpacing: '-0.02em',
         }}
@@ -23,7 +23,7 @@ export default function Home() {
       <p
         style={{
           fontSize: '1rem',
-          color: '#6b7280',
+          color: '#858b98',
           marginBottom: '2rem',
         }}
       >

@@ -5,6 +5,7 @@ import { useUnreadCount } from './hooks/useUnreadCount'
 
 interface ChangelogBadgeProps {
   apiBase: string
+  theme?: 'light' | 'dark'
   userId?: string
   pollInterval?: number
   badgeMaxCount?: number
@@ -15,8 +16,32 @@ interface ChangelogBadgeProps {
   renderTrigger?: (unreadCount: number) => React.ReactNode
 }
 
+const themes = {
+  light: {
+    bg: '#ffffff',
+    bgSubtle: '#f1f3f6',
+    border: '#e5e5e5',
+    fg: '#0a0d17',
+    muted: '#858b98',
+    accent: '#ffd21f',
+    accentFg: '#0a0d17',
+    shadow: '0 1px 4px rgba(0,0,0,0.08)',
+  },
+  dark: {
+    bg: '#0a0d17',
+    bgSubtle: '#101521',
+    border: '#252b3a',
+    fg: '#f1f3f6',
+    muted: '#858b98',
+    accent: '#ffd21f',
+    accentFg: '#0a0d17',
+    shadow: '0 18px 50px rgba(0, 0, 0, 0.32)',
+  },
+} as const
+
 export function ChangelogBadge({
   apiBase,
+  theme = 'dark',
   userId,
   pollInterval = 60000,
   badgeMaxCount = 99,
@@ -26,6 +51,7 @@ export function ChangelogBadge({
   onEntryClick,
   renderTrigger,
 }: ChangelogBadgeProps) {
+  const colors = themes[theme]
   const [isOpen, setIsOpen] = useState(false)
   const { unreadCount, markAllRead } = useUnreadCount(apiBase, userId, pollInterval)
   const triggerRef = useRef<HTMLDivElement>(null)
@@ -74,9 +100,10 @@ export function ChangelogBadge({
             style={{
               position: 'relative',
               padding: '8px 12px',
-              border: '1px solid #e5e7eb',
+              border: `1px solid ${colors.border}`,
               borderRadius: '8px',
-              background: '#fff',
+              background: colors.bg,
+              color: colors.fg,
               cursor: 'pointer',
               fontSize: '14px',
             }}
@@ -88,8 +115,8 @@ export function ChangelogBadge({
                   position: 'absolute',
                   top: '-6px',
                   right: '-6px',
-                  background: '#dc2626',
-                  color: '#fff',
+                  background: colors.accent,
+                  color: colors.accentFg,
                   fontSize: '11px',
                   fontWeight: 700,
                   minWidth: '18px',
@@ -124,25 +151,26 @@ export function ChangelogBadge({
               maxWidth: `calc(100vw - 32px)`,
               maxHeight: '80vh',
               overflowY: 'auto',
-              background: '#fff',
-              border: '1px solid #e5e7eb',
+              background: colors.bg,
+              color: colors.fg,
+              border: `1px solid ${colors.border}`,
               borderRadius: '12px',
-              boxShadow: '0 10px 40px rgba(0,0,0,0.12)',
+              boxShadow: colors.shadow,
               zIndex: 9999,
             }}
           >
             <div
               style={{
                 padding: '16px 20px',
-                borderBottom: '1px solid #e5e7eb',
+                borderBottom: `1px solid ${colors.border}`,
                 display: 'flex',
                 justifyContent: 'space-between',
                 alignItems: 'center',
-                background: '#fafafa',
+                background: colors.bgSubtle,
                 borderRadius: '12px 12px 0 0',
               }}
             >
-              <span style={{ fontWeight: 700, fontSize: '16px', color: '#111827' }}>
+              <span style={{ fontWeight: 700, fontSize: '16px', color: colors.fg }}>
                 Changelog
               </span>
               <button
@@ -153,7 +181,7 @@ export function ChangelogBadge({
                   border: 'none',
                   cursor: 'pointer',
                   fontSize: '20px',
-                  color: '#9ca3af',
+                  color: colors.muted,
                   padding: '0',
                   lineHeight: 1,
                 }}
@@ -169,6 +197,7 @@ export function ChangelogBadge({
                 onEntryClick={onEntryClick}
                 className={panelClassName}
                 emptyMessage="No changelog entries yet."
+                theme={theme}
               />
             </div>
           </div>,
