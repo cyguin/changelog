@@ -1,6 +1,6 @@
 {
   "name": "@cyguin/changelog-adapter-postgres",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "type": "module",
   "description": "Postgres adapter for @cyguin/changelog",
   "keywords": [
@@ -11,7 +11,10 @@
     "nextjs"
   ],
   "license": "MIT",
-  "author": "Cyguin <dev@cyguin.com>",
+  "author": {
+    "name": "cyguin LLC",
+    "url": "https://cyguin.com"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/cyguin/changelog"
@@ -34,7 +37,7 @@
     "README.md"
   ],
   "dependencies": {
-    "@cyguin/changelog-core": "^0.1.7"
+    "@cyguin/changelog-core": "workspace:^"
   },
   "peerDependencies": {
     "postgres": "^3.4.0"
@@ -47,7 +50,7 @@
   },
   "scripts": {
     "build": "tsup",
-    "test": "vitest run",
+    "test": "vitest run --passWithNoTests",
     "typecheck": "tsc --noEmit"
   }
 }

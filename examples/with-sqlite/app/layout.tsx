@@ -3,7 +3,7 @@ import './globals.css'
 
 export const metadata: Metadata = {
   title: 'Changelog — SQLite Example',
-  description: 'Changelog feed powered by SQLite and the Cyguin Changelog library.',
+  description: 'Changelog feed powered by SQLite and the cyguin changelog library.',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

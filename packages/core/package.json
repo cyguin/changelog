@@ -1,6 +1,6 @@
 {
   "name": "@cyguin/changelog-core",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "type": "module",
   "description": "TypeScript types and ChangelogAdapter interface for @cyguin/changelog",
   "keywords": [
@@ -10,7 +10,10 @@
     "typescript"
   ],
   "license": "MIT",
-  "author": "Cyguin <dev@cyguin.com>",
+  "author": {
+    "name": "cyguin LLC",
+    "url": "https://cyguin.com"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/cyguin/changelog"
@@ -31,7 +34,7 @@
   ],
   "scripts": {
     "build": "tsup",
-    "test": "vitest run",
+    "test": "vitest run --passWithNoTests",
     "typecheck": "tsc --noEmit"
   }
 }

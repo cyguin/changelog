@@ -163,7 +163,7 @@ export default function RootLayout({ children }) {
 
 ## self-hosted first
 
-no Cyguin cloud required. these packages are the whole product — the API routes, the schema, the read/write logic. you can run it forever without touching our servers.
+no cyguin cloud required. these packages are the whole product — the API routes, the schema, the read/write logic. you can run it forever without touching our servers.
 
 A hosted tier is planned. If you're interested, watch this repo for updates.
 

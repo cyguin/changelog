@@ -1,6 +1,6 @@
 {
   "name": "@cyguin/changelog-adapter-sqlite",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "type": "module",
   "description": "SQLite adapter for @cyguin/changelog",
   "keywords": [
@@ -10,7 +10,10 @@
     "nextjs"
   ],
   "license": "MIT",
-  "author": "Cyguin <dev@cyguin.com>",
+  "author": {
+    "name": "cyguin LLC",
+    "url": "https://cyguin.com"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/cyguin/changelog"
@@ -33,7 +36,7 @@
     "README.md"
   ],
   "dependencies": {
-    "@cyguin/changelog-core": "^0.1.7"
+    "@cyguin/changelog-core": "workspace:^"
   },
   "peerDependencies": {
     "better-sqlite3": "^9.4.0"

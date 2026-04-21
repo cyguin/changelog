@@ -101,8 +101,8 @@ importers:
   packages/adapters/postgres:
     dependencies:
       '@cyguin/changelog-core':
-        specifier: ^0.1.7
-        version: 0.1.7
+        specifier: workspace:^
+        version: link:../../core
     optionalDependencies:
       postgres:
         specifier: ^3.4.0
@@ -111,8 +111,8 @@ importers:
   packages/adapters/sqlite:
     dependencies:
       '@cyguin/changelog-core':
-        specifier: ^0.1.7
-        version: 0.1.7
+        specifier: workspace:^
+        version: link:../../core
     devDependencies:
       '@types/better-sqlite3':
         specifier: ^7.6.8
@@ -174,9 +174,6 @@ packages:
     resolution: {integrity: sha512-0MhX9/B4iL6Re04jPrttDm+BsP8y6mS7byuv0BvXgdXhbV5PdlsHt55dvNsuBCPZ7xq1oTAOOuotR9NFbQyMSA==}
     bundledDependencies:
       - is-unicode-supported
-
-  '@cyguin/changelog-core@0.1.7':
-    resolution: {integrity: sha512-Nr/kAvOtNPWr7u8Q/XEKug5+Eq8TYmhqQNEB3/SovIPDWwn5Uajgh6Y1+eYfSQsN5yPuyugynTnjueJJ9airvw==}
 
   '@emnapi/runtime@1.10.0':
     resolution: {integrity: sha512-ewvYlk86xUoGI0zQRNq/mC+16R1QeDlKQy21Ki3oSYXNgLb45GV1P6A0M+/s6nyCuNDqe5VpaY84BzXGwVbwFA==}
@@ -1574,8 +1571,6 @@ snapshots:
       '@clack/core': 0.3.5
       picocolors: 1.1.1
       sisteransi: 1.0.5
-
-  '@cyguin/changelog-core@0.1.7': {}
 
   '@emnapi/runtime@1.10.0':
     dependencies:

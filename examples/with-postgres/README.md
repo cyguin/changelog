@@ -1,6 +1,6 @@
 # Changelog — PostgreSQL Example
 
-A minimal Next.js 14 application demonstrating the [Cyguin Changelog](https://github.com/cyguin/changelog) library with a PostgreSQL backend.
+A minimal Next.js 14 application demonstrating the [cyguin changelog](https://github.com/cyguin/changelog) library with a PostgreSQL backend.
 
 ## Prerequisites
 
@@ -36,4 +36,4 @@ Create entries via POST to `/api/changelog` with the `Authorization: Bearer <tok
 }
 ```
 
-See the [Cyguin Changelog README](https://github.com/cyguin/changelog) for the full API reference.
+See the [cyguin changelog README](https://github.com/cyguin/changelog) for the full API reference.

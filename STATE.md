@@ -1,4 +1,4 @@
-# Cyguin Changelog — Build State
+# cyguin changelog — Build State
 
 ## Current Slice: 6 — COMPLETE (published to npm)
 

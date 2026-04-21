@@ -93,7 +93,7 @@ adding your own: [adapter interface docs](./docs/adapters.md)
 
 ## self-hosted first
 
-no Cyguin cloud required. this package is the whole product — the API routes, the schema, the read/write logic. you can run it forever without touching our servers.
+no cyguin cloud required. this package is the whole product — the API routes, the schema, the read/write logic. you can run it forever without touching our servers.
 
 A hosted tier is planned. If you're interested, watch this repo for updates.
 
