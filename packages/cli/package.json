@@ -1,6 +1,6 @@
 {
   "name": "@cyguin/changelog-cli",
-  "version": "0.1.11",
+  "version": "0.1.12",
   "description": "CLI scaffolder for @cyguin/changelog",
   "keywords": [
     "changelog",
