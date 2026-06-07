@@ -1,6 +1,6 @@
 {
   "name": "@cyguin/changelog-cli",
-  "version": "0.1.13",
+  "version": "0.1.14",
   "description": "CLI scaffolder for @cyguin/changelog",
   "keywords": [
     "changelog",
@@ -38,11 +38,12 @@
   ],
   "scripts": {
     "build": "tsup",
-    "test": "vitest run --passWithNoTests",
+    "test": "vitest run",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@clack/prompts": "^0.7.0"
+    "@clack/prompts": "^0.7.0",
+    "vitest": "^4.1.8"
   },
   "devDependencies": {
     "@types/node": "^20.0.0",
