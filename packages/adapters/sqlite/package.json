@@ -1,6 +1,6 @@
 {
   "name": "@cyguin/changelog-adapter-sqlite",
-  "version": "0.1.14",
+  "version": "0.1.15",
   "type": "module",
   "description": "SQLite adapter for @cyguin/changelog",
   "keywords": [
@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/cyguin/changelog"
+    "url": "git+https://github.com/cyguin/changelog.git"
   },
   "homepage": "https://github.com/cyguin/changelog#readme",
   "bugs": {

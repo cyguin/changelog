@@ -1,6 +1,6 @@
 {
   "name": "@cyguin/changelog-cli",
-  "version": "0.1.14",
+  "version": "0.1.15",
   "description": "CLI scaffolder for @cyguin/changelog",
   "keywords": [
     "changelog",
@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/cyguin/changelog"
+    "url": "git+https://github.com/cyguin/changelog.git"
   },
   "homepage": "https://github.com/cyguin/changelog#readme",
   "bugs": {
