@@ -1,3 +1,5 @@
+> **This package is no longer actively maintained.** cyguin has narrowed focus to security research (PSCryptoPatterns, PSCertPatterns, PSCMSPatterns). Existing published versions remain on npm and MIT-licensed, but no further releases are planned. See cyguin.com for current work.
+
 # @cyguin/changelog
 
 
